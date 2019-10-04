@@ -7,7 +7,7 @@ import Task from './Task.js';
 
 // App component - represents the whole app
 class App extends Component {
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault();
 
         // Find the text field via the React ref
@@ -35,7 +35,7 @@ class App extends Component {
                     <h1>Todo List</h1>
                 </header>
 
-                <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+                <form className="new-task" onSubmit={this.handleSubmit} >
                     <input
                         type="text"
                         ref="textInput"
